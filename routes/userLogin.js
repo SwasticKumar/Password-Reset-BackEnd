@@ -27,11 +27,11 @@ router.post("/", async (req, res) => {
       });
     }
 
-   //Generate AuthToken and send response
+    //Generate AuthToken and send response
     const authToken = generateToken(user._id);
     const userName = user.username;
     res.status(200).json({
-      message: "Logged In",
+      message: "User Logged In",
       authToken,
       userName,
     });
